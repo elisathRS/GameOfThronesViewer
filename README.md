@@ -51,7 +51,7 @@ GIF created with **KAP**
 
 ## Notes
 
-Here's a place for any other notes on the app, it's creation process, or what you learned this unit!
+Through this project, I gained experience in: Selecting an API and comprehensively understanding its documentation. Analyzing and parsing the JSON response received from the API and Extracting and showcasing various fields from the API data.
 
 ## License
 
