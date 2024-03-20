@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewCharacter"
+        android:layout_width="188dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitleLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleLabel"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Game of Throne Characters"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleCharacterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="Title"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvFamilyCharacterLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFullNameLabel" />
+
+    <TextView
+        android:id="@+id/tvFamilyCharacterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="40dp"
+        android:text="Family"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleCharacterLabel" />
+
+    <TextView
+        android:id="@+id/tvFullNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="34dp"
+        android:text="Full Name"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCharacter" />
+
+    <TextView
+        android:id="@+id/tvFullNameCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="5dp"
+        android:text="John Snow"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFullNameLabel" />
+
+    <TextView
+        android:id="@+id/tvTitleCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="5dp"
+        android:text="King of the North"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleCharacterLabel" />
+
+    <TextView
+        android:id="@+id/tvFamilyCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="5dp"
+        android:text="House Stark"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFamilyCharacterLabel" />
+
+    <Button
+        android:id="@+id/btnNextCharacter"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="211dp"
+        android:text="NEXT CHARACTER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFamilyCharacter" />
+</androidx.constraintlayout.widget.ConstraintLayout>
