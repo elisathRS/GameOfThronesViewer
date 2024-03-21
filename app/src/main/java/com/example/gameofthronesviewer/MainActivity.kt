@@ -10,13 +10,10 @@ import com.bumptech.glide.Glide
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import okhttp3.Headers
-import kotlin.random.Random
 import org.json.JSONArray
 
-
-
 class MainActivity : AppCompatActivity() {
- private val characterList = mutableListOf<Pair<String, Triple<String, String, String>>>()
+ private val characterList = mutableListOf<Character>()
  private var currentIndex = 0
 
  override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,11 +30,11 @@ class MainActivity : AppCompatActivity() {
 
   button.setOnClickListener {
    requestRandomCharacter()
-   val (imageUrl, characterInfo) = characterList[currentIndex]
-   displayCharacter(imageUrl, imageView)
-   tvFullName.text = characterInfo.first
-   tvTitle.text = characterInfo.second
-   tvFamily.text = characterInfo.third
+   val character = characterList[currentIndex]
+   displayCharacter(character.imageUrl, imageView)
+   tvFullName.text = character.fullName
+   tvTitle.text = character.title
+   tvFamily.text = character.family
   }
  }
 
@@ -52,20 +49,20 @@ class MainActivity : AppCompatActivity() {
      val fullName = character.getString("fullName")
      val title = character.getString("title")
      val family = character.getString("family")
-     characterList.add(Pair(imageUrl, Triple(fullName, title, family)))
+     characterList.add(Character(imageUrl, fullName, title, family))
     }
     Log.d("Character List", "Successfully fetched character list.")
     // Set initial character data after fetching the list
     if (characterList.isNotEmpty()) {
-     val (imageUrl, characterInfo) = characterList[currentIndex]
+     val character = characterList[currentIndex]
      val imageView = findViewById<ImageView>(R.id.imageViewCharacter)
      val tvFullName = findViewById<TextView>(R.id.tvFullNameCharacter)
      val tvTitle = findViewById<TextView>(R.id.tvTitleCharacter)
      val tvFamily = findViewById<TextView>(R.id.tvFamilyCharacter)
-     displayCharacter(imageUrl, imageView)
-     tvFullName.text = characterInfo.first
-     tvTitle.text = characterInfo.second
-     tvFamily.text = characterInfo.third
+     displayCharacter(character.imageUrl, imageView)
+     tvFullName.text = character.fullName
+     tvTitle.text = character.title
+     tvFamily.text = character.family
     }
    }
 
